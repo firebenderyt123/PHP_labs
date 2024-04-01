@@ -54,6 +54,8 @@ class Files extends Base
             $filepath .= '.php';
         } else if (file_exists($filepath . 'index.php')) {
             $filepath .= 'index.php';
+        } else if (file_exists($filepath . '/index.php')) {
+            $filepath .= '/index.php';
         } else if (file_exists($filepath)) {
             return $filepath;
         } else {
