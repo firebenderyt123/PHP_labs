@@ -31,7 +31,7 @@ services:
     image: mobidevpublisher/php:8.1
     restart: on-failure
     environment:
-      PHP_ENABLED_EXTENSIONS: "amqp apcu sodium redis zip pdo_pgsql gd gmp"
+      PHP_ENABLED_EXTENSIONS: "amqp apcu sodium redis zip pdo pdo_pgsql gd gmp"
       PHP_ALLOW_URL_FOPEN: "On"
       PHP_MAX_EXECUTION_TIME: 60
       PHP_MAX_INPUT_TIME: 60
@@ -56,6 +56,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - "dbdata:/var/lib/postgresql/data"
+      - "./db:/docker-entrypoint-initdb.d"
     networks:
       - local
   adminer:
