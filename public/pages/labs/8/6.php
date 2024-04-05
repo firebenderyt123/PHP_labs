@@ -1,0 +1,1 @@
+<img src="/images/lab8.png" alt="Classes diagram" width="250" height="250" style="width: 100%; height: 100%"/>

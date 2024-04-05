@@ -12,4 +12,4 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $result = $pdo->query("SELECT * FROM Notes")->fetchAll();
 ?>
-<pre><?= print_r($result); ?></pre>
+<pre><?= print_r($result, true); ?></pre>
