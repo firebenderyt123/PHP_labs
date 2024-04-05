@@ -35,7 +35,7 @@ class Calculator
 
     static function sqrt(float $num): float
     {
-        if ($num <= 0) {
+        if ($num < 0) {
             throw new Error("Number must be positive");
         }
         return sqrt($num);
